@@ -15,18 +15,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.agent.builder.AgentBuilder.RedefinitionStrategy.DiscoveryStrategy.Explicit;
 
 public class AddItemsToCart {
-	public static void main(String[] args)  {
-
+	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		WebDriverWait w = new WebDriverWait(driver, 5);
-//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-
 		String[] items = { "Brocolli", "Cucumber", "Onion", "Tomato" };
 		addItems(driver, items);
+		clickOnCart(driver);
 		checkCart(driver, items, w);
-
+//		checkCart(driver, items);
 	}
 
 	public static void addItems(WebDriver driver, String[] items) {
@@ -53,22 +51,28 @@ public class AddItemsToCart {
 		}
 	}
 
+	public static void clickOnCart(WebDriver driver) {
+		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
+	}
+
+	public static void checkCart(WebDriver driver, String[] items) {
+		// implicitlyWait
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//div[@class='action-block']/button")).click();
+		driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.cssSelector("button[class='promoBtn']")).click();
+		String text = driver.findElement(By.cssSelector("span[class='promoInfo']")).getText();
+		System.out.println(text);
+	}
+
 	public static void checkCart(WebDriver driver, String[] items, WebDriverWait w) {
-//				
-			driver.findElement(By.cssSelector("img[alt='Cart']")).click();
-			driver.findElement(By.xpath("//div[@class='action-block']/button")).click();
-			w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.promoCode")));
-			
-			driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
-			driver.findElement(By.cssSelector("button[class='promoBtn']")).click();
-			
-			
-			w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[class='promoInfo']")));
-			
-			System.out.println(driver.findElement(By.cssSelector("span[class='promoInfo']")).getText());
-			
-			//div[@class='action-block']/button
-//			PROCEED TO CHECKOUT
-					}
+		// explicitlyWait
+		driver.findElement(By.xpath("//div[@class='action-block']/button")).click();
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.promoCode")));
+		driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.cssSelector("button[class='promoBtn']")).click();
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[class='promoInfo']")));
+		System.out.println(driver.findElement(By.cssSelector("span[class='promoInfo']")).getText());
+	}
 
 }

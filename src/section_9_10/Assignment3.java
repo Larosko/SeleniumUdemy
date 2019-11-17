@@ -16,10 +16,10 @@ public class Assignment3 {
 //		WebDriverWait w = new WebDriverWait(driver, 5);
 		driver.get("http://www.itgeared.com/demo/1506-ajax-loading.html");
 		driver.findElement(By.xpath("//a[text()='Click to load get data via Ajax!']")).click();
-		
+
 		new WebDriverWait(driver, 5)
-		.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@id ='results']")));
-		
+				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@id ='results']")));
+
 		System.out.println(driver.findElement(By.xpath("//div[@id ='results']")).getText());
 	}
 }
