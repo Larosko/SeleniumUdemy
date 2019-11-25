@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="86" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="38" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+      <class name="sec_18.MyTestNG">
+        <test-method status="PASS" signature="Before()[pri:0, instance:sec_18.MyTestNG@1c3a4799]" name="Before" is-config="true" duration-ms="0" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Before -->
+        <test-method status="PASS" signature="Demo()[pri:0, instance:sec_18.MyTestNG@1c3a4799]" name="Demo" duration-ms="16" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo -->
+        <test-method status="PASS" signature="SecondTest()[pri:0, instance:sec_18.MyTestNG@1c3a4799]" name="SecondTest" duration-ms="0" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SecondTest -->
+        <test-method status="PASS" signature="After()[pri:0, instance:sec_18.MyTestNG@1c3a4799]" name="After" is-config="true" duration-ms="0" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- After -->
+      </class> <!-- sec_18.MyTestNG -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="17" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+      <class name="sec_18.MyTestNG">
+        <test-method status="PASS" signature="Before()[pri:0, instance:sec_18.MyTestNG@1b68ddbd]" name="Before" is-config="true" duration-ms="0" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Before -->
+        <test-method status="PASS" signature="Demo()[pri:0, instance:sec_18.MyTestNG@1b68ddbd]" name="Demo" duration-ms="16" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo -->
+        <test-method status="PASS" signature="afSyite()[pri:0, instance:sec_18.MyTestNG@1b68ddbd]" name="afSyite" is-config="true" duration-ms="0" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afSyite -->
+        <test-method status="PASS" signature="SecondTest()[pri:0, instance:sec_18.MyTestNG@1b68ddbd]" name="SecondTest" duration-ms="0" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SecondTest -->
+        <test-method status="PASS" signature="After()[pri:0, instance:sec_18.MyTestNG@1b68ddbd]" name="After" is-config="true" duration-ms="0" started-at="2019-11-23T12:41:20 CET" finished-at="2019-11-23T12:41:20 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- After -->
+      </class> <!-- sec_18.MyTestNG -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>
